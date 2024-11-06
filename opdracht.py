@@ -18,16 +18,22 @@ def get_cat_fact():
 #verschillende tijden voor antwoorden.
 time.sleep(random.randint(2, 4, 3))
 #patterns voor responses/dictionary
+
 patterns = { 
    "Ik wil (.*)":"Waarom wil je dat doen? Kan ik je daarbij helpen, met {}", 
-   "Ik voel me (.*)":"Waarom voel jij je {}, als je je slecht voelt kan ik je opvrolijken met een kattenfeitje!",
+   "Ik voel me (.*)":"Waarom voel jij je {}, als je je zo voelt kan ik je opvrolijken met een kattenfeitje!",
    "Ik zou hulp willen met (.*)": "Hoe kan ik je helpen met {}.",
     "(.*)kattenfeitje(.*)": get_cat_fact()
+    " (.*)"
+    
+    
 }
 #dictionary
 responses = {
   "Hallo": ["Hoi, hoe gaat het?", "Hallo!"],
   "Het gaat goed": ["Goed om te horen!", "toppie!"]
+  "Het gaat slecht":["ohh dat is niet zo fijn, hoe kan ik je oprvrolijken, waarom is dat zo?"]
+  
 
 }
 
