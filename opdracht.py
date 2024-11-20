@@ -16,25 +16,26 @@ def get_cat_fact():
   return cat_fact
 
 #verschillende tijden voor antwoorden.
-time.sleep(random.randint(2, 4, 3))
+time.sleep(random.randint(1, 3))
 #patterns voor responses/dictionary
 
-patterns = { 
-   "Ik wil (.*)":"Waarom wil je dat doen? Kan ik je daarbij helpen, met {}", 
-   "Ik voel me (.*)":"Waarom voel jij je {}, als je je zo voelt kan ik je opvrolijken met een kattenfeitje!",
-   "Ik zou hulp willen met (.*)": "Hoe kan ik je helpen met {}.",
-    "(.*)kattenfeitje(.*)": get_cat_fact()
-    " (.*)"
-    
-    
+patterns = {
+  "Ik heb last van (.*)":"Als je last heb van {} is het beste wat je kan doen, of zelf een oplossing zoeken op het internet, ik zou zorgvisie.nl aanbevelen, of als u veel last heeft de huisarts bellen.", 
+  "Ik zou hulp willen met (.*)": "Hoe kan ik je helpen met {}.",
+  "Ik voel me (.*)": "hoelang voel je je {}?",
+  "Al (.*) lang": "{} is een lange tijd, als je een van de volgende klachten heb zou ik een dokter raadplegen: benauwd zijn, suf voelen, verward zijn of steeds zieker worden ",
+  "Ik zou hulp willen met (.*)": "Hoe kan ik je helpen met {}.",
+  "De pijn komt van (.*)": "Oke je hebt dus pijn aan je {} dan zou ik even gaan kijken op het internet wat je er aan kan doen.",
+  "(.*)kattenfeitje(.*)": get_cat_fact()
 }
+
 #dictionary
 responses = {
   "Hallo": ["Hoi, hoe gaat het?", "Hallo!"],
-  "Het gaat goed": ["Goed om te horen!", "toppie!"]
-  "Het gaat slecht":["ohh dat is niet zo fijn, hoe kan ik je oprvrolijken, waarom is dat zo?"]
-  
-
+  "Bedankt": ["Geen probleem, word snel beter!"],
+  "Het gaat beter": ["Goed om te horen!", "Wat fijn!"],
+  "Het gaat goed": ["Mooi!"],
+  "Ik heb pijn": ["oei, waar komt die pijn vandaan?"]
 }
 
 
